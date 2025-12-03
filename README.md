@@ -1,4 +1,4 @@
-# 🚀 AdInsight AI: Automated Ad Campaign Analysis & Reporting
+# 🚀 AdInsight AI: Automated Ad Campaign Analysis & Reporting H-001
 
 **Tagline:** A full-stack AI-powered system that ingests raw advertising data, detects anomalies, and generates executive-ready PDF reports with AI-driven insights — all locally without API limits.
 
