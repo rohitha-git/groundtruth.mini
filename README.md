@@ -1,8 +1,6 @@
-# groundtruth.mini
- # AdInsight AI: Automated Ad Campaign Analysis & Reporting H-001
- 
+# 🚀 AdInsight AI: Automated Ad Campaign Analysis & Reporting
 
-**Tagline:** A full-stack AI-powered system that ingests raw advertising data, detects anomalies, and generates executive-ready PDF reports with AI-driven insights.
+**Tagline:** A full-stack AI-powered system that ingests raw advertising data, detects anomalies, and generates executive-ready PDF reports with AI-driven insights — all locally without API limits.
 
 ---
 
@@ -15,7 +13,7 @@ Digital marketing teams spend hours manually downloading CSVs, calculating KPIs,
 If an ad campaign underperforms, the client may not know for days. Manual reporting delays actionable insights, leading to wasted budget and lost opportunities.
 
 **Our Solution:**  
-AdInsight AI automatically ingests raw advertising datasets, calculates KPIs, detects anomalies using machine learning, and generates AI-powered recommendations in a PDF report. Users simply upload a CSV, and actionable insights are delivered within seconds.
+AdInsight AI automatically ingests raw advertising datasets, calculates KPIs, detects anomalies using machine learning, and generates AI-powered recommendations in a PDF report. Users simply upload a CSV, and actionable insights are delivered within seconds — **no API limits required**.
 
 ---
 
@@ -38,7 +36,7 @@ AdInsight AI automatically ingests raw advertising datasets, calculates KPIs, de
 **System Architecture:**  
 
 1. **Data Ingestion:**  
-   - Accepts CSV datasets with columns like `campaign_number`, `displays`, `clicks`, `cost`, `revenue`, `post_click_conversions`.  
+   - Accepts CSV datasets with columns like `Campaign`, `Impressions`, `Clicks`, `Cost`, `Revenue`, `Conversions`.  
    - Uses Python `pandas`/`polars` for efficient data processing.
 
 2. **Data Cleaning & KPI Calculation:**  
@@ -51,11 +49,10 @@ AdInsight AI automatically ingests raw advertising datasets, calculates KPIs, de
 
 3. **Anomaly Detection:**  
    - Uses Isolation Forest to detect unusual campaigns automatically.  
-   - Optionally uses Z-score to detect numeric outliers.
 
-4. **AI-Powered Insights:**  
-   - Generates natural language explanations and recommendations for anomalies.  
-   - Uses OpenAI GPT-4o / Google Gemini with structured prompts.  
+4. **Local AI-Powered Insights:**  
+   - Uses **local/open-source LLMs** such as GPT4All, MPT, or LLaMA via Hugging Face transformers.  
+   - Generates natural language explanations and recommendations for anomalies **without relying on OpenAI API**.  
 
 5. **Reporting:**  
    - Generates executive-ready PDFs including KPI charts, anomalies, and AI insights.  
@@ -68,7 +65,7 @@ AdInsight AI automatically ingests raw advertising datasets, calculates KPIs, de
 - **Language:** Python 3.11  
 - **Data Engine:** Pandas / Polars  
 - **Machine Learning:** Scikit-Learn (Isolation Forest)  
-- **AI Model:** OpenAI GPT-4o / Google Gemini  
+- **AI Model:** GPT4All / MPT / LLaMA (local Hugging Face models)  
 - **Visualization:** Plotly  
 - **PDF Rendering:** WeasyPrint  
 - **Orchestration:** Google Colab / Docker (optional for production)  
@@ -81,8 +78,8 @@ AdInsight AI automatically ingests raw advertising datasets, calculates KPIs, de
   - Solution: Structured prompts and validation to ensure AI only uses provided data.
 - **Challenge 2:** Managing large datasets  
   - Solution: Polars DataFrame and event-driven processing for faster performance.
-- **Challenge 3:** OpenAI API changes  
-  - Solution: Updated to Chat API (`openai.chat.completions.create`) with latest library version.
+- **Challenge 3:** Avoiding API limits  
+  - Solution: Switched to local/open-source LLMs (GPT4All, MPT, LLaMA) to generate insights offline.
 
 ---
 
